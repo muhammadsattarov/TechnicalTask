@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		CE688E882D6F050C002E3E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688E872D6F050C002E3E8C /* AppDelegate.swift */; };
 		CE688E8A2D6F050C002E3E8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688E892D6F050C002E3E8C /* SceneDelegate.swift */; };
-		CE688E8C2D6F050C002E3E8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688E8B2D6F050C002E3E8C /* ViewController.swift */; };
-		CE688E8F2D6F050C002E3E8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE688E8D2D6F050C002E3E8C /* Main.storyboard */; };
+		CE688E8C2D6F050C002E3E8C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688E8B2D6F050C002E3E8C /* HomeViewController.swift */; };
 		CE688E912D6F050E002E3E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE688E902D6F050E002E3E8C /* Assets.xcassets */; };
 		CE688E942D6F050E002E3E8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE688E922D6F050E002E3E8C /* LaunchScreen.storyboard */; };
+		CE688E9F2D6F061C002E3E8C /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688E9E2D6F061C002E3E8C /* HomeTableView.swift */; };
+		CE688EA22D6F0702002E3E8C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EA12D6F0702002E3E8C /* Constants.swift */; };
+		CE688EA52D6F08CF002E3E8C /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EA42D6F08CF002E3E8C /* Todo.swift */; };
+		CE688EA82D6F0971002E3E8C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EA72D6F0971002E3E8C /* Networking.swift */; };
+		CE688EAA2D6F09A9002E3E8C /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EA92D6F09A9002E3E8C /* NetworkDataFetcher.swift */; };
+		CE688EAC2D6F09C8002E3E8C /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EAB2D6F09C8002E3E8C /* TodoService.swift */; };
+		CE688EAE2D6F0D8F002E3E8C /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EAD2D6F0D8F002E3E8C /* Users.swift */; };
+		CE688EB12D6F1528002E3E8C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB02D6F1528002E3E8C /* HomeTableViewCell.swift */; };
+		CE688EB42D6F18EB002E3E8C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB32D6F18EB002E3E8C /* HomeTableViewDelegate.swift */; };
+		CE688EB82D6F193A002E3E8C /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */; };
+		CE688EBA2D6F24E0002E3E8C /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE688E842D6F050C002E3E8C /* TechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE688E872D6F050C002E3E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE688E892D6F050C002E3E8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE688E8B2D6F050C002E3E8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE688E8E2D6F050C002E3E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE688E8B2D6F050C002E3E8C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CE688E902D6F050E002E3E8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE688E932D6F050E002E3E8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE688E952D6F050E002E3E8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE688E9E2D6F061C002E3E8C /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		CE688EA12D6F0702002E3E8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE688EA42D6F08CF002E3E8C /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		CE688EA72D6F0971002E3E8C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		CE688EA92D6F09A9002E3E8C /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		CE688EAB2D6F09C8002E3E8C /* TodoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoService.swift; sourceTree = "<group>"; };
+		CE688EAD2D6F0D8F002E3E8C /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		CE688EB02D6F1528002E3E8C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		CE688EB32D6F18EB002E3E8C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
+		CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,105 @@
 		CE688E862D6F050C002E3E8C /* TechnicalTask */ = {
 			isa = PBXGroup;
 			children = (
-				CE688E872D6F050C002E3E8C /* AppDelegate.swift */,
-				CE688E892D6F050C002E3E8C /* SceneDelegate.swift */,
-				CE688E8B2D6F050C002E3E8C /* ViewController.swift */,
-				CE688E8D2D6F050C002E3E8C /* Main.storyboard */,
+				CE688E9B2D6F0519002E3E8C /* Application */,
+				CE688EA62D6F0965002E3E8C /* Service */,
+				CE688EA32D6F08C9002E3E8C /* Model */,
+				CE688EA02D6F06F7002E3E8C /* Resources */,
+				CE688E9D2D6F0616002E3E8C /* Views */,
+				CE688E9C2D6F0520002E3E8C /* Controllers */,
 				CE688E902D6F050E002E3E8C /* Assets.xcassets */,
 				CE688E922D6F050E002E3E8C /* LaunchScreen.storyboard */,
 				CE688E952D6F050E002E3E8C /* Info.plist */,
 			);
 			path = TechnicalTask;
+			sourceTree = "<group>";
+		};
+		CE688E9B2D6F0519002E3E8C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CE688E872D6F050C002E3E8C /* AppDelegate.swift */,
+				CE688E892D6F050C002E3E8C /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CE688E9C2D6F0520002E3E8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EB62D6F1924002E3E8C /* General */,
+				CE688EB52D6F191E002E3E8C /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE688E9D2D6F0616002E3E8C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EAF2D6F151F002E3E8C /* Cell */,
+				CE688E9E2D6F061C002E3E8C /* HomeTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE688EA02D6F06F7002E3E8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EB22D6F18E4002E3E8C /* Protocols */,
+				CE688EA12D6F0702002E3E8C /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE688EA32D6F08C9002E3E8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EA42D6F08CF002E3E8C /* Todo.swift */,
+				CE688EAD2D6F0D8F002E3E8C /* Users.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE688EA62D6F0965002E3E8C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EA72D6F0971002E3E8C /* Networking.swift */,
+				CE688EA92D6F09A9002E3E8C /* NetworkDataFetcher.swift */,
+				CE688EAB2D6F09C8002E3E8C /* TodoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CE688EAF2D6F151F002E3E8C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EB02D6F1528002E3E8C /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE688EB22D6F18E4002E3E8C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EB32D6F18EB002E3E8C /* HomeTableViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE688EB52D6F191E002E3E8C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE688E8B2D6F050C002E3E8C /* HomeViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE688EB62D6F1924002E3E8C /* General */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */,
+				CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +237,6 @@
 			files = (
 				CE688E942D6F050E002E3E8C /* LaunchScreen.storyboard in Resources */,
 				CE688E912D6F050E002E3E8C /* Assets.xcassets in Resources */,
-				CE688E8F2D6F050C002E3E8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +247,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE688E8C2D6F050C002E3E8C /* ViewController.swift in Sources */,
+				CE688EAC2D6F09C8002E3E8C /* TodoService.swift in Sources */,
+				CE688EA22D6F0702002E3E8C /* Constants.swift in Sources */,
+				CE688EAE2D6F0D8F002E3E8C /* Users.swift in Sources */,
+				CE688EA52D6F08CF002E3E8C /* Todo.swift in Sources */,
+				CE688E8C2D6F050C002E3E8C /* HomeViewController.swift in Sources */,
+				CE688EB12D6F1528002E3E8C /* HomeTableViewCell.swift in Sources */,
+				CE688EB82D6F193A002E3E8C /* UserInfoViewController.swift in Sources */,
+				CE688E9F2D6F061C002E3E8C /* HomeTableView.swift in Sources */,
+				CE688EBA2D6F24E0002E3E8C /* SearchResultController.swift in Sources */,
 				CE688E882D6F050C002E3E8C /* AppDelegate.swift in Sources */,
+				CE688EAA2D6F09A9002E3E8C /* NetworkDataFetcher.swift in Sources */,
+				CE688EA82D6F0971002E3E8C /* Networking.swift in Sources */,
+				CE688EB42D6F18EB002E3E8C /* HomeTableViewDelegate.swift in Sources */,
 				CE688E8A2D6F050C002E3E8C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE688E8D2D6F050C002E3E8C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE688E8E2D6F050C002E3E8C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE688E922D6F050E002E3E8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +408,6 @@
 				INFOPLIST_FILE = TechnicalTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +434,6 @@
 				INFOPLIST_FILE = TechnicalTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

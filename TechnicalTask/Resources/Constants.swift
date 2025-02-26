@@ -1,8 +1,21 @@
-//
-//  Constants.swift
-//  TechnicalTask
-//
-//  Created by user on 26/02/25.
-//
+
+
 
 import Foundation
+
+struct Constants {
+  static let baseUrl = "https://jsonplaceholder.typicode.com/"
+}
+
+
+enum UrlItem {
+  case todos
+  case users
+
+  var url: String {
+    switch self {
+    case .todos: return "todos"
+    case .users: return "users"
+    }
+  }
+}

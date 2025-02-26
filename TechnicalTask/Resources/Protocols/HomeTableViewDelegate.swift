@@ -1,8 +1,7 @@
-//
-//  Home.swift
-//  TechnicalTask
-//
-//  Created by user on 26/02/25.
-//
+
 
 import Foundation
+
+protocol HomeTableViewDelegate: AnyObject {
+  func didSelectRowAt(_ indexPath: IndexPath, user: User)
+}
