@@ -5,15 +5,19 @@ import UIKit
 
 class HomeTableView: UIView {
 
-  private let tableView: UITableView = {
+  let tableView: UITableView = {
     $0.translatesAutoresizingMaskIntoConstraints = false
     $0.register(HomeTableViewCell.self,
                 forCellReuseIdentifier: HomeTableViewCell.reuseId)
     return $0
-  }(UITableView(frame: .zero, style: .grouped))
+  }(UITableView(frame: .zero, style: .plain))
 
   var todos: [Todo] = []
   var users: [User] = []
+  var displayedTodos: [Int: [Todo]] = [:]
+  var currentLimit: [Int: Int] = [:]
+  var isSearching: Bool = false
+  var isLoadingMore = false
 
   weak var delegate: HomeTableViewDelegate?
 
@@ -22,21 +26,16 @@ class HomeTableView: UIView {
     super.init(frame: frame)
     setupUI()
   }
-  
-  func configure(with model: [Todo]) {
-    DispatchQueue.main.async { [weak self] in
-      guard let self = self else { return }
-      self.todos = model
-      self.tableView.reloadData()
-    }
-  }
 
-  func configure(_ users: [User]) {
-    DispatchQueue.main.async { [weak self] in
-      guard let self = self else { return }
-      self.users = users
-      self.tableView.reloadData()
-    }
+  func configure(todos: [Todo], users: [User]) {
+    self.todos = todos
+    self.users = users
+    groupTodosByUser()
+    tableView.reloadData()
+  }
+  func updateDisplayedTodos(_ newDisplayedTodos: [Int: [Todo]]) {
+    self.displayedTodos = newDisplayedTodos
+    tableView.reloadData()
   }
 
   required init?(coder: NSCoder) {
@@ -51,6 +50,7 @@ private extension HomeTableView {
     self.addSubview(tableView)
     tableView.delegate = self
     tableView.dataSource = self
+  //  tableView.prefetchDataSource = self
     setConstraints()
   }
 }
@@ -67,20 +67,57 @@ private extension HomeTableView {
   }
 }
 
+private extension HomeTableView {
+  func groupTodosByUser() {
+    displayedTodos.removeAll()
+    currentLimit.removeAll()
+
+    let groupedTodos = Dictionary(grouping: todos, by: { $0.userId })
+    for (userId, todos) in groupedTodos {
+      currentLimit[userId] = 20 // Boshlang‘ich holatda 20 ta yuklash
+      displayedTodos[userId] = Array(todos.prefix(currentLimit[userId]!))
+    }
+  }
+}
+
+extension HomeTableView: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let scrollViewHeight = scrollView.frame.size.height
+
+        if offsetY > (contentHeight - scrollViewHeight - 50) {
+            delegate?.loadMoreTodos() // Upload new data
+        }
+    }
+}
+
 // MARK: - UITableViewDataSource, UITableViewDelegate
 extension HomeTableView: UITableViewDataSource, UITableViewDelegate {
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return users.count
+  }
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return todos.count
+
+    let userId = users[section].id
+    return displayedTodos[userId]?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reuseId, for: indexPath) as? HomeTableViewCell else {
       return UITableViewCell()
     }
-    let todo = todos[indexPath.row]
-    guard let user = getUserData(for: todo.userId) else { return UITableViewCell() }
-    cell.configure(user.name, description: todo.title)
+    let userId = users[indexPath.section].id
+    if let todo = displayedTodos[userId]?[indexPath.row] {
+      guard let user = getUserData(for: todo.userId) else { return UITableViewCell() }
+      cell.configure(user.name, description: todo.title)
+    }
+
     return cell
+  }
+
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return isSearching ? nil : users[section].name
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

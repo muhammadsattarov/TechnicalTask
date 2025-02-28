@@ -20,7 +20,7 @@ extension AddressModel {
     @NSManaged public var suite: String?
     @NSManaged public var city: String?
     @NSManaged public var zipcode: String?
-    @NSManaged public var geo: Geo?
+    @NSManaged public var geo: GeoModel?
 
 }
 

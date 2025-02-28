@@ -9,9 +9,9 @@ class HomeViewController: UIViewController {
 
   private let homeTableView = HomeTableView()
 
-  private var todos: [Todo] = []
-  private var users: [User] = []
-  private var filteredTodos: [Todo] = [] // 🔹 Filterlangan ma’lumotlar
+  private var filteredTodos: [Todo] = [] // Filtered data
+
+  private let viewModel = HomeViewModel()
 
   //MARK: - Override Methods
   override func viewDidLoad() {
@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     fetchUserFromDatabase()
-    fetchDataFromDatabase()
+    setupNotification()
   }
 }
 
@@ -31,6 +31,7 @@ private extension HomeViewController {
     addSubviews()
     setConstraints()
     setupSearchBar()
+    fetchDataFromDatabase()
   }
 }
 
@@ -59,20 +60,16 @@ private extension HomeViewController {
 //MARK: - Add Subviews
 private extension HomeViewController {
   func fetchUserFromDatabase() {
-    TodoService.shared.fetchUsers { users in
-      if let users {
-        self.users = users
-        self.homeTableView.configure(self.users)
-      }
-    }
+    print(#function)
+    viewModel.fetchData()
   }
 
   func fetchDataFromDatabase() {
-    TodoService.shared.fetchTodos { [weak self] todos in
+    viewModel.onDataLoaded = { [weak self] in
       guard let self = self else { return }
-      if let todos {
-        self.todos = todos
-        self.homeTableView.configure(with: self.todos)
+      DispatchQueue.main.async {
+        self.homeTableView.configure(todos: self.viewModel.todos, users: self.viewModel.users)
+        self.homeTableView.tableView.reloadData()
       }
     }
   }
@@ -92,22 +89,30 @@ private extension HomeViewController {
 
 // MARK: - UISearchResultsUpdating
 extension HomeViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
-            filteredTodos = todos // 🔹 Agar qidiruv bo‘lmasa, barcha ma’lumotlarni ko‘rsatamiz
-            homeTableView.configure(with: filteredTodos)
-            return
-        }
-      print(searchText)
+  func updateSearchResults(for searchController: UISearchController) {
+      guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
+          homeTableView.isSearching = false
+        homeTableView.configure(todos: viewModel.todos, users: viewModel.users)
+          return
+      }
 
-        filteredTodos = todos.filter { todo in
-            let user = users.first(where: { $0.id == todo.userId })
-            let userName = user?.name.lowercased() ?? ""
-            return todo.title.lowercased().contains(searchText.lowercased()) ||
-                   userName.contains(searchText.lowercased())
-        }
-        homeTableView.configure(with: filteredTodos)
-    }
+      homeTableView.isSearching = true
+
+    filteredTodos = viewModel.todos.filter { todo in
+      let user = viewModel.users.first(where: { $0.id == todo.userId })
+          let userName = user?.name.lowercased() ?? ""
+          return todo.title.lowercased().contains(searchText.lowercased()) ||
+                 userName.contains(searchText.lowercased())
+      }
+
+      var filteredDisplayedTodos: [Int: [Todo]] = [:]
+      let groupedTodos = Dictionary(grouping: filteredTodos, by: { $0.userId })
+      for (userId, todos) in groupedTodos {
+          filteredDisplayedTodos[userId] = Array(todos.prefix(20))
+      }
+
+    homeTableView.updateDisplayedTodos(filteredDisplayedTodos)
+  }
 }
 
 //MARK: - HomeTableViewDelegate
@@ -117,5 +122,22 @@ extension HomeViewController: HomeTableViewDelegate {
     vc.configure(with: user)
     navigationController?.pushViewController(vc, animated: true)
   }
+
+  func loadMoreTodos() {
+      viewModel.loadMoreTodos()
+  }
 }
 
+
+//MARK: - Setup Notification
+private extension HomeViewController {
+  func setupNotification() {
+    NotificationCenter.default.addObserver(self, selector: #selector(networkStatusChanged(_:)), name: .networkStatusChanged, object: nil)
+  }
+
+  @objc private func networkStatusChanged(_ notification: Notification) {
+      if let isConnected = notification.object as? Bool {
+          print("Tarmoq holati o‘zgardi: \(isConnected ? "Online" : "Offline")")
+      }
+  }
+}

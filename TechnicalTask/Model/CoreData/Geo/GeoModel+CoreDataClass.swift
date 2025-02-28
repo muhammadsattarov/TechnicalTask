@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Geo)
+@objc(GeoModel)
 public class GeoModel: NSManagedObject {
 
 }

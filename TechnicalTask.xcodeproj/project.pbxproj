@@ -22,7 +22,20 @@
 		CE688EB12D6F1528002E3E8C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB02D6F1528002E3E8C /* HomeTableViewCell.swift */; };
 		CE688EB42D6F18EB002E3E8C /* HomeTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB32D6F18EB002E3E8C /* HomeTableViewDelegate.swift */; };
 		CE688EB82D6F193A002E3E8C /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */; };
-		CE688EBA2D6F24E0002E3E8C /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */; };
+		CE688EBC2D6F57B1002E3E8C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EBB2D6F57B1002E3E8C /* NetworkMonitor.swift */; };
+		CE688EBF2D6F5B48002E3E8C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EBE2D6F5B48002E3E8C /* CoreDataManager.swift */; };
+		CE688EC22D6F5BE4002E3E8C /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE688EC02D6F5BE4002E3E8C /* ToDoList.xcdatamodeld */; };
+		CE688EE12D6F8AD5002E3E8C /* CompanyModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688ED72D6F8AD5002E3E8C /* CompanyModel+CoreDataClass.swift */; };
+		CE688EE22D6F8AD5002E3E8C /* CompanyModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688ED82D6F8AD5002E3E8C /* CompanyModel+CoreDataProperties.swift */; };
+		CE688EE32D6F8AD5002E3E8C /* AddressModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688ED92D6F8AD5002E3E8C /* AddressModel+CoreDataClass.swift */; };
+		CE688EE42D6F8AD5002E3E8C /* AddressModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDA2D6F8AD5002E3E8C /* AddressModel+CoreDataProperties.swift */; };
+		CE688EE52D6F8AD5002E3E8C /* TodoListModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDB2D6F8AD5002E3E8C /* TodoListModel+CoreDataClass.swift */; };
+		CE688EE62D6F8AD5002E3E8C /* TodoListModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDC2D6F8AD5002E3E8C /* TodoListModel+CoreDataProperties.swift */; };
+		CE688EE72D6F8AD5002E3E8C /* UserModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDD2D6F8AD5002E3E8C /* UserModel+CoreDataClass.swift */; };
+		CE688EE82D6F8AD5002E3E8C /* UserModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDE2D6F8AD5002E3E8C /* UserModel+CoreDataProperties.swift */; };
+		CE688EE92D6F8AD5002E3E8C /* GeoModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EDF2D6F8AD5002E3E8C /* GeoModel+CoreDataClass.swift */; };
+		CE688EEA2D6F8AD5002E3E8C /* GeoModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EE02D6F8AD5002E3E8C /* GeoModel+CoreDataProperties.swift */; };
+		CE688EF32D6F8E13002E3E8C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE688EF22D6F8E13002E3E8C /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +56,20 @@
 		CE688EB02D6F1528002E3E8C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		CE688EB32D6F18EB002E3E8C /* HomeTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewDelegate.swift; sourceTree = "<group>"; };
 		CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
-		CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
+		CE688EBB2D6F57B1002E3E8C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		CE688EBE2D6F5B48002E3E8C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CE688EC12D6F5BE4002E3E8C /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
+		CE688ED72D6F8AD5002E3E8C /* CompanyModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE688ED82D6F8AD5002E3E8C /* CompanyModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompanyModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE688ED92D6F8AD5002E3E8C /* AddressModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE688EDA2D6F8AD5002E3E8C /* AddressModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE688EDB2D6F8AD5002E3E8C /* TodoListModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE688EDC2D6F8AD5002E3E8C /* TodoListModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoListModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE688EDD2D6F8AD5002E3E8C /* UserModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE688EDE2D6F8AD5002E3E8C /* UserModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE688EDF2D6F8AD5002E3E8C /* GeoModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeoModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE688EE02D6F8AD5002E3E8C /* GeoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeoModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE688EF22D6F8E13002E3E8C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +108,7 @@
 				CE688EA02D6F06F7002E3E8C /* Resources */,
 				CE688E9D2D6F0616002E3E8C /* Views */,
 				CE688E9C2D6F0520002E3E8C /* Controllers */,
+				CE688EF12D6F8DFC002E3E8C /* ViewModel */,
 				CE688E902D6F050E002E3E8C /* Assets.xcassets */,
 				CE688E922D6F050E002E3E8C /* LaunchScreen.storyboard */,
 				CE688E952D6F050E002E3E8C /* Info.plist */,
@@ -128,8 +155,10 @@
 		CE688EA32D6F08C9002E3E8C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE688EEB2D6F8AF0002E3E8C /* CoreData */,
 				CE688EA42D6F08CF002E3E8C /* Todo.swift */,
 				CE688EAD2D6F0D8F002E3E8C /* Users.swift */,
+				CE688EC02D6F5BE4002E3E8C /* ToDoList.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,9 +166,9 @@
 		CE688EA62D6F0965002E3E8C /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CE688EA72D6F0971002E3E8C /* Networking.swift */,
-				CE688EA92D6F09A9002E3E8C /* NetworkDataFetcher.swift */,
-				CE688EAB2D6F09C8002E3E8C /* TodoService.swift */,
+				CE688EBB2D6F57B1002E3E8C /* NetworkMonitor.swift */,
+				CE688EBD2D6F57BB002E3E8C /* Networking */,
+				CE688EBE2D6F5B48002E3E8C /* CoreDataManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -172,9 +201,83 @@
 			isa = PBXGroup;
 			children = (
 				CE688EB72D6F193A002E3E8C /* UserInfoViewController.swift */,
-				CE688EB92D6F24E0002E3E8C /* SearchResultController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		CE688EBD2D6F57BB002E3E8C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EA72D6F0971002E3E8C /* Networking.swift */,
+				CE688EA92D6F09A9002E3E8C /* NetworkDataFetcher.swift */,
+				CE688EAB2D6F09C8002E3E8C /* TodoService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CE688EEB2D6F8AF0002E3E8C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EF02D6F8BDB002E3E8C /* UserModel */,
+				CE688EEF2D6F8BD2002E3E8C /* TodoListModel */,
+				CE688EEE2D6F8B60002E3E8C /* AddressModel */,
+				CE688EED2D6F8B15002E3E8C /* Geo */,
+				CE688EEC2D6F8B04002E3E8C /* Company */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CE688EEC2D6F8B04002E3E8C /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				CE688ED72D6F8AD5002E3E8C /* CompanyModel+CoreDataClass.swift */,
+				CE688ED82D6F8AD5002E3E8C /* CompanyModel+CoreDataProperties.swift */,
+			);
+			path = Company;
+			sourceTree = "<group>";
+		};
+		CE688EED2D6F8B15002E3E8C /* Geo */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EDF2D6F8AD5002E3E8C /* GeoModel+CoreDataClass.swift */,
+				CE688EE02D6F8AD5002E3E8C /* GeoModel+CoreDataProperties.swift */,
+			);
+			path = Geo;
+			sourceTree = "<group>";
+		};
+		CE688EEE2D6F8B60002E3E8C /* AddressModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE688ED92D6F8AD5002E3E8C /* AddressModel+CoreDataClass.swift */,
+				CE688EDA2D6F8AD5002E3E8C /* AddressModel+CoreDataProperties.swift */,
+			);
+			path = AddressModel;
+			sourceTree = "<group>";
+		};
+		CE688EEF2D6F8BD2002E3E8C /* TodoListModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EDB2D6F8AD5002E3E8C /* TodoListModel+CoreDataClass.swift */,
+				CE688EDC2D6F8AD5002E3E8C /* TodoListModel+CoreDataProperties.swift */,
+			);
+			path = TodoListModel;
+			sourceTree = "<group>";
+		};
+		CE688EF02D6F8BDB002E3E8C /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EDD2D6F8AD5002E3E8C /* UserModel+CoreDataClass.swift */,
+				CE688EDE2D6F8AD5002E3E8C /* UserModel+CoreDataProperties.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		CE688EF12D6F8DFC002E3E8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE688EF22D6F8E13002E3E8C /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,20 +350,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE688EE92D6F8AD5002E3E8C /* GeoModel+CoreDataClass.swift in Sources */,
 				CE688EAC2D6F09C8002E3E8C /* TodoService.swift in Sources */,
 				CE688EA22D6F0702002E3E8C /* Constants.swift in Sources */,
+				CE688EEA2D6F8AD5002E3E8C /* GeoModel+CoreDataProperties.swift in Sources */,
 				CE688EAE2D6F0D8F002E3E8C /* Users.swift in Sources */,
+				CE688EE52D6F8AD5002E3E8C /* TodoListModel+CoreDataClass.swift in Sources */,
+				CE688EBF2D6F5B48002E3E8C /* CoreDataManager.swift in Sources */,
 				CE688EA52D6F08CF002E3E8C /* Todo.swift in Sources */,
 				CE688E8C2D6F050C002E3E8C /* HomeViewController.swift in Sources */,
 				CE688EB12D6F1528002E3E8C /* HomeTableViewCell.swift in Sources */,
+				CE688EF32D6F8E13002E3E8C /* HomeViewModel.swift in Sources */,
 				CE688EB82D6F193A002E3E8C /* UserInfoViewController.swift in Sources */,
 				CE688E9F2D6F061C002E3E8C /* HomeTableView.swift in Sources */,
-				CE688EBA2D6F24E0002E3E8C /* SearchResultController.swift in Sources */,
 				CE688E882D6F050C002E3E8C /* AppDelegate.swift in Sources */,
+				CE688EE42D6F8AD5002E3E8C /* AddressModel+CoreDataProperties.swift in Sources */,
+				CE688EE12D6F8AD5002E3E8C /* CompanyModel+CoreDataClass.swift in Sources */,
 				CE688EAA2D6F09A9002E3E8C /* NetworkDataFetcher.swift in Sources */,
 				CE688EA82D6F0971002E3E8C /* Networking.swift in Sources */,
+				CE688EE72D6F8AD5002E3E8C /* UserModel+CoreDataClass.swift in Sources */,
+				CE688EE82D6F8AD5002E3E8C /* UserModel+CoreDataProperties.swift in Sources */,
+				CE688EE62D6F8AD5002E3E8C /* TodoListModel+CoreDataProperties.swift in Sources */,
 				CE688EB42D6F18EB002E3E8C /* HomeTableViewDelegate.swift in Sources */,
 				CE688E8A2D6F050C002E3E8C /* SceneDelegate.swift in Sources */,
+				CE688EBC2D6F57B1002E3E8C /* NetworkMonitor.swift in Sources */,
+				CE688EC22D6F5BE4002E3E8C /* ToDoList.xcdatamodeld in Sources */,
+				CE688EE22D6F8AD5002E3E8C /* CompanyModel+CoreDataProperties.swift in Sources */,
+				CE688EE32D6F8AD5002E3E8C /* AddressModel+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +587,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE688EC02D6F5BE4002E3E8C /* ToDoList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE688EC12D6F5BE4002E3E8C /* ToDoList.xcdatamodel */,
+			);
+			currentVersion = CE688EC12D6F5BE4002E3E8C /* ToDoList.xcdatamodel */;
+			path = ToDoList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE688E7C2D6F050C002E3E8C /* Project object */;
 }
